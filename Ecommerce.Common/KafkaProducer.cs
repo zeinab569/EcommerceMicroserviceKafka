@@ -1,12 +1,12 @@
 ﻿using Confluent.Kafka;
+using Newtonsoft.Json;
 
-namespace Ecommerce.OrderService.Kafka;
+namespace Ecommerce.Common;
 
 public interface IKafkaProducer
 {
-    Task ProduceAsync(string topic, Message<string, string> message);
+    Task ProduceAsync(string topic, Object message);
 }
-
 public class KafkaProducer : IKafkaProducer
 {
     private readonly IProducer<string, string> _producer;
@@ -20,9 +20,9 @@ public class KafkaProducer : IKafkaProducer
         };
         _producer = new ProducerBuilder<string, string>(config).Build();
     }
-
-    public async Task ProduceAsync(string topic, Message<string, string> message)
+    public async Task ProduceAsync(string topic, object message)
     {
-        await _producer.ProduceAsync(topic, message);
+        var kafkaMessage = new Message<string, string> { Value = JsonConvert.SerializeObject(message) };
+        await _producer.ProduceAsync(topic, kafkaMessage);
     }
 }

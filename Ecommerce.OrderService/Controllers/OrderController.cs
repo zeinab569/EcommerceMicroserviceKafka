@@ -1,10 +1,8 @@
-﻿using Confluent.Kafka;
+﻿using Ecommerce.Common;
 using Ecommerce.Model;
 using Ecommerce.OrderService.Data;
-using Ecommerce.OrderService.Kafka;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 
 namespace Ecommerce.OrderService.Controllers
 {
@@ -25,18 +23,14 @@ namespace Ecommerce.OrderService.Controllers
             dbContext.Orders.Add(order);
             await dbContext.SaveChangesAsync();
 
-            //var orderMessage = new OrderMessage
-            //{
-            //    OrderId = order.Id,
-            //    ProductId = order.ProductId,
-            //    Quantity = order.Quantity
-            //};
-
-            await kafkaProducer.ProduceAsync("order-topic", new Message<string, string>
+            var orderMessage = new OrderMessage
             {
-                Key = order.Id.ToString(),
-                Value = JsonSerializer.Serialize(order)
-            });
+                OrderId = order.Id,
+                ProductId = order.ProductId,
+                Quantity = order.Quantity
+            };
+
+            await kafkaProducer.ProduceAsync("order-created", orderMessage);
 
             return order;
         }

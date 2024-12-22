@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Web", "Ecommerce.Web\Ecommerce.Web.csproj", "{EF2FB39C-3E62-4763-9892-3606BA5F32D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Web", "Ecommerce.Web\Ecommerce.Web.csproj", "{EF2FB39C-3E62-4763-9892-3606BA5F32D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.ProductService", "Ecommerce.ProductService\Ecommerce.ProductService.csproj", "{B27B9D4C-FEE0-4712-A75D-1E07FBA07C74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.ProductService", "Ecommerce.ProductService\Ecommerce.ProductService.csproj", "{B27B9D4C-FEE0-4712-A75D-1E07FBA07C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.OrderService", "Ecommerce.OrderService\Ecommerce.OrderService.csproj", "{8DB4BE24-DF72-48C4-A1FE-CD6E8F28FB16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.OrderService", "Ecommerce.OrderService\Ecommerce.OrderService.csproj", "{8DB4BE24-DF72-48C4-A1FE-CD6E8F28FB16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Model", "Ecommerce.Model\Ecommerce.Model.csproj", "{40EBD6F7-9E54-4C09-B03B-10BAF5C364DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Model", "Ecommerce.Model\Ecommerce.Model.csproj", "{40EBD6F7-9E54-4C09-B03B-10BAF5C364DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.AppHost", "Ecommerce.AppHost\Ecommerce.AppHost.csproj", "{AA7A01F7-C4C5-46D7-A922-E1D3DCADAB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.AppHost", "Ecommerce.AppHost\Ecommerce.AppHost.csproj", "{AA7A01F7-C4C5-46D7-A922-E1D3DCADAB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Common", "Ecommerce.Common\Ecommerce.Common.csproj", "{364CAE33-E27E-434C-8AB9-C7FD78B4B984}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AA7A01F7-C4C5-46D7-A922-E1D3DCADAB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA7A01F7-C4C5-46D7-A922-E1D3DCADAB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA7A01F7-C4C5-46D7-A922-E1D3DCADAB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364CAE33-E27E-434C-8AB9-C7FD78B4B984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364CAE33-E27E-434C-8AB9-C7FD78B4B984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364CAE33-E27E-434C-8AB9-C7FD78B4B984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364CAE33-E27E-434C-8AB9-C7FD78B4B984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

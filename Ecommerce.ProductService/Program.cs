@@ -1,3 +1,4 @@
+using Ecommerce.Common;
 using Ecommerce.ProductService.Data;
 using Ecommerce.ProductService.Kafka;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProductDbContextcs>(options =>
 options.UseSqlServer("Data Source=.; Initial Catalog=EcommerceProduct; Integrated Security=True; TrustServerCertificate=True"));
 
-builder.Services.AddHostedService<KafkaConsumer>(); 
+builder.Services.AddSingleton<IKafkaProducer, KafkaProducer>();
+builder.Services.AddHostedService<ProductConsumer>();
 
 var app = builder.Build();
 
