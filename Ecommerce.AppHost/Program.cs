@@ -7,4 +7,6 @@ builder.AddProject<Projects.Ecommerce_Web>("webfrontend")
     .WithReference(apiProductService)
     .WithReference(apiOrderService);
 
+builder.AddProject<Projects.Ecommerce_PaymentService>("apiservice-payment");
+
 builder.Build().Run();

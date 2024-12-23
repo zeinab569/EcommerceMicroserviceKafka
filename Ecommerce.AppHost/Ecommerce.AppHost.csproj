@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ecommerce.OrderService\Ecommerce.OrderService.csproj" />
+    <ProjectReference Include="..\Ecommerce.PaymentService\Ecommerce.PaymentService.csproj" />
     <ProjectReference Include="..\Ecommerce.ProductService\Ecommerce.ProductService.csproj" />
     <ProjectReference Include="..\Ecommerce.Web\Ecommerce.Web.csproj" />
   </ItemGroup>
