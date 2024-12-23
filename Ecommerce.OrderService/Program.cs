@@ -1,5 +1,6 @@
 using Ecommerce.Common;
 using Ecommerce.OrderService.Data;
+using Ecommerce.OrderService.Kafka;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IKafkaProducer, KafkaProducer>();
+builder.Services.AddHostedService<OrderConsumer>();
 
 builder.Services.AddDbContext<OrderDbContext>(options =>
 options.UseSqlServer("Data Source=.; Initial Catalog=EcommerceOrder; Integrated Security=True; TrustServerCertificate=True"));

@@ -32,8 +32,7 @@ public class PaymentConsumer(IKafkaProducer kafkaProducer) : KafkaConsumer(topic
 
     private async Task<bool> PaymentProcessed(OrderMessage orderMessage)
     {
-        
-        return false;
+        return true;
     }
 
 }
